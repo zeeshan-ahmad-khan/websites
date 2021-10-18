@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  background-color: #000f25;
+}
+
+header {
+  background-color: #021635;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 0 25px;
+  margin-bottom: 15px;
+}
+
+.header-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-container .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header-container .logo img {
+  height: 100%;
+}
+
+.search {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.search-container {
+  background-color: #021635;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: flex;
+}
+
+.input-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+.input-container input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+.input-container i {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+.button-container {
+  background-color: blue;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-container:hover,
+.apply-now:hover {
+  background: rgb(44, 44, 255);
+}
+
+.jobs-list {
+  background-color: #000f25;
+  width: 1000px;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs-list h1 {
+  margin: 15px;
+  font-size: 15px;
+}
+
+.jobs-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.job-tile {
+  background-color: #021635;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  padding: 30px;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden
+}
+
+.job-tile:hover {
+  transform: scale(1.05);
+}
+
+.message {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  font-size: 13px;
+  background-color:#000F25;
+  color: white;
+  transform: translateY(-100%)
+}
+
+.message.active{
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.role-name {
+  padding: 20px 0;
+}
+
+.role-name span {
+  font-size: 17px;
+}
+
+.description {
+  height: 105px;
+  flex-grow: 1;
+  overflow: hidden;
+  font-size: 13px;
+  color: rgb(211, 211, 211);
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.button {
+  background-color: #000f25;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.apply-now {
+  background: blue;
+  margin-right: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 759px) {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .jobs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
